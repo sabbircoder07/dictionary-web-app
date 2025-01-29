@@ -1,0 +1,17 @@
+@import "breakpoints";
+
+/*BASE-Base Variables with mixins and palceholders*/
+
+@import "base";
+@import "typography";
+
+/*FRAMEWORK-Structure and layout files*/
+
+/*Component-header and another files*/
+@import "header";
+@import "modeSwitcher";
+@import "cta";
+@import "mainSection";
+@import "dictionaryApp";
+@import "spinner";
+@import "message";

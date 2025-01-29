@@ -1,0 +1,101 @@
+.cta {
+  &__search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0rem;
+    width: 73rem;
+    max-width: 144rem;
+    @media only screen and (max-width: $bp-small) {
+      padding: 2.4rem 0rem;
+      width: 100%;
+    }
+  }
+
+  &__word-form {
+    outline: none;
+    width: 73rem;
+    max-width: 144rem;
+    @media only screen and (max-width: $bp-medium-tab) {
+      padding: 0rem 2.6rem;
+      width: 100%;
+    }
+    @media only screen and (max-width: $bp-small) {
+      padding: 0rem 1.8rem;
+    }
+
+    fieldset {
+      outline: none;
+      border: none;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .field {
+      position: relative;
+      width: 100%;
+    }
+
+    .input__word-name {
+      width: 73.6rem;
+      height: 6.4rem;
+      padding-left: 5.6rem;
+      border: 0;
+      border-radius: 5px;
+      background-color: var(--color-seven);
+      outline: none;
+      color: inherit;
+      font-size: 2rem;
+      font-weight: 600;
+      box-shadow: 0 6px 12px -2px #32325d40, 0 3px 7px -3px #0000004d;
+      transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+      @media only screen and (max-width: $bp-medium-tab) {
+        width: 100%;
+      }
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.6rem;
+        height: 5.2rem;
+      }
+    }
+
+    .input__word-name::placeholder {
+      font-size: 1.6rem;
+      color: var(--color-five);
+      opacity: 0.8;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 2rem;
+      top: 2.2rem;
+      width: 2rem;
+      height: 2rem;
+      pointer-events: none;
+      z-index: 1;
+      @media only screen and (max-width: $bp-small) {
+        left: 2rem;
+        top: 1.6rem;
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+    }
+
+    input[type="text"]:invalid {
+      background-color: #fce4e4;
+      border: 1px solid #e03131;
+      outline: none;
+    }
+    .error-message {
+      color: #e03131;
+      font-size: 1.6rem;
+      padding: 1rem 0 0 1rem;
+      display: none;
+    }
+
+    input[type="text"]:invalid + .error-message {
+      display: block;
+    }
+  }
+}

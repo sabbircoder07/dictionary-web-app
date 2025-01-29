@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./sass/main.scss" />
+    <script defer type="module" src="./js/controller.js"></script>
+    <title>Frontend Mentor | Dictionary web app</title>
+  </head>
+  <body class="body">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__brand">
+          <a href="./index.html" class="header__logo-link">
+            <img
+              src="./assets/images/logo.svg"
+              alt="logo"
+              class="header__logo"
+            />
+          </a>
+        </div>
+        <div class="header__cta">
+          <div class="header__font-name">
+            <div class="field select">
+              <select id="font-name" class="font-list">
+                <option value="Sans Serifs">Sans Serif</option>
+                <option value="Serif">Serif</option>
+                <option value="2">Mono</option>
+              </select>
+            </div>
+          </div>
+          <div class="header__mode-switcher">
+            <label for="modeSwitcher" class="ui-switch">
+              <input id="modeSwitcher" type="checkbox" />
+              <div class="slider">
+                <div class="circle"></div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="cta__search-container">
+        <form action="#" id="wordSearchOption" class="cta__word-form">
+          <fieldset>
+            <div class="field autocomplete">
+              <img
+                class="search-icon"
+                src="./assets/images/icon-search.svg"
+                alt="search"
+              />
+              <input
+                type="text"
+                name="wordName"
+                id="wordName"
+                class="input__word-name"
+                placeholder="Search for a word..."
+                required
+                autocomplete="off"
+                value="keyboard"
+              />
+              <div class="error-message">This field is required</div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+      <section class="dictionary-app"></section>
+    </main>
+  </body>
+</html>

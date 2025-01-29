@@ -1,0 +1,112 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-seven);
+  box-shadow: 0 0.6rem 1.2rem -0.2rem #32325d40,
+    0 0.3rem 0.7rem -0.3rem #0000004d;
+  transition: all 0.2s ease-in-out;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 73rem;
+    max-width: 144rem;
+    padding: 2rem 0 1.6rem 0;
+    @media only screen and (max-width: $bp-medium-tab) {
+      padding: 2rem 2.6rem 1.6rem 2.6rem;
+      width: 100%;
+    }
+    @media only screen and (max-width: $bp-small) {
+      padding: 2rem 1.8rem 1.6rem 1.8rem;
+    }
+  }
+  &__font-name {
+    border-right: 1px solid #0000004d;
+    padding-right: 2rem;
+    @media only screen and (max-width: $bp-small) {
+      padding-right: 1.4rem;
+    }
+
+    .field {
+      position: relative;
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+      outline: 0;
+      box-shadow: none;
+      border: 0 !important;
+      appearance: none;
+      /*  safari  */
+      -webkit-appearance: none;
+      /*  other styles for aesthetics */
+      width: 16rem;
+      height: 3.2rem;
+      padding: 0.6rem 2rem 0.6rem 1.6rem;
+      background-color: var(--color-six);
+      font-size: 1.8rem;
+      color: inherit !important;
+      cursor: pointer;
+      box-shadow: 0 6px 12px -2px #32325d40, 0 3px 7px -3px #0000004d;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.4rem;
+        width: 14rem;
+      }
+    }
+    select::-ms-expand {
+      display: none;
+    }
+    .select::before,
+    .select::after {
+      --size: 0.4rem;
+      content: "";
+      position: absolute;
+      right: 1.4rem;
+      pointer-events: none;
+    }
+
+    .select::before {
+      border-left: var(--size) solid transparent;
+      border-right: var(--size) solid transparent;
+      border-bottom: var(--size) solid var(--color-four);
+      top: 40%;
+    }
+
+    .select::after {
+      border-left: var(--size) solid transparent;
+      border-right: var(--size) solid transparent;
+      border-top: var(--size) solid var(--color-four);
+      top: 60%;
+    }
+
+    .font-list {
+      font-size: 1.8rem;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.4rem;
+      }
+    }
+    .font-list:hover {
+      cursor: pointer !important;
+    }
+  }
+  &__logo {
+    cursor: pointer;
+    width: 3.2rem;
+    height: 3.6rem;
+    @media only screen and (max-width: $bp-small) {
+      margin-top: 1rem;
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+  &__cta {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+}

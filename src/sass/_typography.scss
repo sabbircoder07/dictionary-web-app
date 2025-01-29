@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --color-one: #050505;
+  --color-two: #1f1f1f;
+  --color-three: #2d2d2d;
+  --color-four: #3a3a3a;
+  --color-five: #757575;
+  --color-six: #e9e9e9;
+  --color-seven: #f4f4f4;
+  --color-eight: #a445ed;
+  --color-nine: #ff5252;
+  --color-White: #ffffff;
+  --font: "Sans Serif";
+}
+
+body {
+  font-family: "Roboto", serif;
+  margin: 0 auto;
+  max-width: 144rem;
+  min-height: calc(100vh);
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: var(--color-one);
+  transition: all 0.2s ease-in-out;
+}
+
+h1,
+h2,
+h3 {
+  color: inherit;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.heading-One {
+  font-size: 6.4rem;
+  @media only screen and (max-width: $bp-small) {
+    font-size: 3.2rem;
+  }
+}
+.heading-two {
+  font-size: 2.4rem;
+  @media only screen and (max-width: $bp-small) {
+    font-size: 1.8rem;
+  }
+}
+
+.heading-three {
+  font-size: 2rem;
+  @media only screen and (max-width: $bp-small) {
+    font-size: 1.6rem;
+  }
+}
+
+p {
+  color: inherit;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  @media only screen and (max-width: $bp-smaller) {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+}
