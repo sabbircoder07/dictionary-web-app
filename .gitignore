@@ -13,5 +13,9 @@
 
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
+.parcel-cache/
+dictionary-web-app-figma/
+dist/
+public/
 node_modules/
 package-lock.json

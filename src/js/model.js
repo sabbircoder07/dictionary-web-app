@@ -28,6 +28,8 @@ export const getDictionaryWordInformation = async function (searchWord) {
       `${API_URL_FOR_DICTIONARY}${searchWord}`
     );
 
+    console.log(wordInformation);
+
     // Update the state with the retrieved data
     state.resultWord = wordInformation[0].word;
 

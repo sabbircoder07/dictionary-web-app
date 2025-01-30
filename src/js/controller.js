@@ -11,6 +11,15 @@ const controlDictionaryAPP = async function () {
 
     await model.getDictionaryWordInformation(givenWord);
 
+    /*
+    const data = model.state;
+    if (data.length === 0) {
+      dictionaryAPPView.renderError();
+      return;
+    }
+    dictionaryAPPView.render(data);
+    */
+
     setTimeout(function () {
       const data = model.state;
       if (data.length === 0) {

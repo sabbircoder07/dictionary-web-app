@@ -1,4 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap";
 *, :after, :before {
   box-sizing: inherit;
   margin: 0;
@@ -30,7 +31,7 @@ body {
   min-height: 100vh;
   color: var(--color-one);
   margin: 0 auto;
-  font-family: Roboto, serif;
+  font-family: Sans Serif, serif;
   font-size: 1.8rem;
   line-height: 2.4rem;
   transition: all .2s ease-in-out;
@@ -507,14 +508,13 @@ p {
 
 .dictionary-app .dictionary__definition-text {
   color: var(--color-five);
-  padding-bottom: 1.6rem;
   font-weight: 400;
 }
 
 .dictionary-app .dictionary__definition-list {
   flex-direction: column;
-  gap: 1.4rem;
-  padding: 0 0 0 4rem;
+  gap: 1.2rem;
+  padding: 1.6rem 0 0 4rem;
   font-size: 1.8rem;
   line-height: 2.4rem;
   display: flex;
@@ -534,22 +534,31 @@ p {
 }
 
 .dictionary-app .dictionary__definition-synonyms-list {
+  flex-wrap: wrap;
+  gap: 1rem;
+  display: flex;
+}
+
+.dictionary-app .dictionary__definition-synonym-name {
   color: var(--color-eight);
   cursor: pointer;
+  background-color: #2d2d2d;
+  border-radius: .4rem;
+  padding: .2rem .8rem;
   font-size: 1.8rem;
   font-weight: 600;
   transition: all .2s ease-in-out;
 }
 
 @media only screen and (width <= 37.5em) {
-  .dictionary-app .dictionary__definition-synonyms-list {
+  .dictionary-app .dictionary__definition-synonym-name {
     font-size: 1.6rem;
   }
 }
 
 .dictionary-app .dictionary__definition-example {
   color: var(--color-five);
-  margin-top: -.8rem;
+  margin-top: -.6rem;
   padding-left: 1rem;
   font-size: 1.8rem;
   font-weight: 400;

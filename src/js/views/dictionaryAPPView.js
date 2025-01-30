@@ -165,9 +165,14 @@ export class DictionaryAPPView {
                    el.synonyms.length === 0
                      ? ""
                      : `
-                  <h3 class="dictionary__definition-text heading-three">Synonyms</h3> 
+                <h3 class="dictionary__definition-text heading-three">Synonyms</h3> 
                 <div class="dictionary__definition-synonyms-list">
-                ${el.synonyms}
+                ${el.synonyms
+                  .map(
+                    (synonym) =>
+                      `<div class="dictionary__definition-synonym-name" >${synonym}</div>`
+                  )
+                  .join("")}
                 </div>
                  `
                  }

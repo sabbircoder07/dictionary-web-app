@@ -608,7 +608,14 @@ const controlDictionaryAPP = async function() {
         //dictionaryAPPView.renderSpinner();
         (0, _dictionaryAPPViewJsDefault.default).renderSpinner();
         await _modelJs.getDictionaryWordInformation(givenWord);
-        setTimeout(function() {
+        /*
+    const data = model.state;
+    if (data.length === 0) {
+      dictionaryAPPView.renderError();
+      return;
+    }
+    dictionaryAPPView.render(data);
+    */ setTimeout(function() {
             const data = _modelJs.state;
             if (data.length === 0) {
                 (0, _dictionaryAPPViewJsDefault.default).renderError();
@@ -657,6 +664,7 @@ const getDictionaryWordInformation = async function(searchWord) {
         state.searchWord = searchWord;
         // Fetch the word information from the API
         const wordInformation = await (0, _helperJs.getJSON)(`${(0, _configJs.API_URL_FOR_DICTIONARY)}${searchWord}`);
+        console.log(wordInformation);
         // Update the state with the retrieved data
         state.resultWord = wordInformation[0].word;
         // If the word has a phonetic transcription, update the state with it
@@ -906,9 +914,9 @@ class DictionaryAPPView {
 
                  <div class="dictionary__definition-synonyms">
                  ${el.synonyms.length === 0 ? "" : `
-                  <h3 class="dictionary__definition-text heading-three">Synonyms</h3> 
+                <h3 class="dictionary__definition-text heading-three">Synonyms</h3> 
                 <div class="dictionary__definition-synonyms-list">
-                ${el.synonyms}
+                ${el.synonyms.map((synonym)=>`<div class="dictionary__definition-synonym-name" >${synonym}</div>`).join("")}
                 </div>
                  `}
                 </div>
@@ -934,7 +942,7 @@ class DictionaryAPPView {
 }
 exports.default = new DictionaryAPPView();
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../../assets/images/icon-arrow-down.svg":"fmnUs","../../assets/images/icon-play.svg":"19bci","../../assets/images/icon-new-window.svg":"emblb"}],"fmnUs":[function(require,module,exports,__globalThis) {
+},{"../../assets/images/icon-arrow-down.svg":"fmnUs","../../assets/images/icon-play.svg":"19bci","../../assets/images/icon-new-window.svg":"emblb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fmnUs":[function(require,module,exports,__globalThis) {
 module.exports = require("910340b5a76b2cf2").getBundleURL('hWUTQ') + "icon-arrow-down.d3bf7fc5.svg" + "?" + Date.now();
 
 },{"910340b5a76b2cf2":"lgJ39"}],"lgJ39":[function(require,module,exports,__globalThis) {

@@ -68,15 +68,14 @@
         }
       }
       &-text {
-        padding-bottom: 1.6rem;
         color: var(--color-five);
         font-weight: 400;
       }
       &-list {
-        padding: 0 0 0 4rem;
+        padding: 1.6rem 0 0 4rem;
         display: flex;
         flex-direction: column;
-        gap: 1.4rem;
+        gap: 1.2rem;
         color: inherit !important;
         font-size: 1.8rem;
         line-height: 2.4rem;
@@ -90,6 +89,14 @@
         padding-top: 2rem;
       }
       &-synonyms-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      &-synonym-name {
+        background-color: #2d2d2d;
+        padding: 0.2rem 0.8rem;
+        border-radius: 0.4rem;
         font-size: 1.8rem;
         color: var(--color-eight);
         font-weight: 600;
@@ -101,7 +108,7 @@
       }
       &-example {
         padding-left: 1rem;
-        margin-top: -0.8rem;
+        margin-top: -0.6rem;
         font-size: 1.8rem;
         color: var(--color-five);
         font-weight: 400;
